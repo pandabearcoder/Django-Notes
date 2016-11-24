@@ -1,0 +1,18 @@
+<div class="col-sm-6">
+    {% for note in note_list %}
+    <div class="well">
+
+        <div class="pull-right">
+            <a href="/edit/{{ note.id }}" class="btn btn-default">
+                <span class="glyphicon glyphicon-pencil"></span>
+            </a>
+            <button class="btn btn-default" id="btn_delete" onclick="deleteNote('{{ note.id }}')">
+                <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </div>
+
+        <h3>{{ note.title }}</h3>
+        <h4>{{ note.note }}</h3>
+    </div>
+    {% endfor %}
+</div>
